@@ -1,0 +1,43 @@
+@model IEnumerable<Category>
+
+@{
+    ViewBag.Title = "Wszystkie kategorie";
+    Layout = "_AdminLayout";
+}
+
+
+<table class="table">
+  <thead>
+      <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Nazwa</th>
+          <th scope="col"></th>
+      </tr>
+  </thead>
+  <tbody>
+      @foreach (var s in Model)
+    {
+      <tr>
+          <th scope="row">@s.Id</th>
+          <td>@s.Name</td>
+
+
+          <td class="text-center">
+              <form asp-action="DeleteCategory" method="post">
+                  <a asp-action="EditOrAddCategory" class="btn btn-sm btn-warning" asp-route-shopId="@s.Id">
+                      Edytuj
+                  </a>
+                  <input type="hidden" name="shopId" value="@s.Id" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+      </tr>
+    }
+
+      <div class="text-center" style="margin-bottom:2%">  <div class="text-center" style="margin-bottom:2%">
+          <a asp-action="EditOrAddCategory" asp-route-categoryId="0" class="btn btn-primary">Dodaj kategorie</a>
+      </div>
+  </tbody>
+</table>

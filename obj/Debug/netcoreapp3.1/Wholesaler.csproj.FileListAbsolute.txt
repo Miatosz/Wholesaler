@@ -1,0 +1,7 @@
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.csprojAssemblyReference.cache
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.AssemblyInfoInputs.cache
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.AssemblyInfo.cs
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.csproj.CoreCompileInputs.cache
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.RazorAssemblyInfo.cache
+C:\Users\Karol\Desktop\Wholesaler\obj\Debug\netcoreapp3.1\Wholesaler.RazorAssemblyInfo.cs

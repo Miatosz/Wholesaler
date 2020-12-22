@@ -1,0 +1,51 @@
+@model IEnumerable<Shop>
+
+@{
+    ViewBag.Title = "Wszystkie sklepy";
+    Layout = "_AdminLayout";
+}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Miasto</th>
+      <th scope="col">Ulica</th>
+      <th scope="col">Kod pocztowy</th>
+      <th scope="col">Numer tel.</th>
+      <th scope="col">Email</th>
+	  <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var s in Model)
+    {
+      <tr>
+          <th scope="row">@s.ShopId</th>
+          <td>@s.Name</td>
+          <td>@s.City</td>
+          <td>@s.Street</td>
+          <td>@s.PostalCode</td>
+          <td>@s.PhoneNumber</td>
+          <td>@s.Email</td>
+
+          <td class="text-center">
+              <form asp-action="DeleteShop" method="post">
+                  <a asp-action="EditShop" class="btn btn-sm btn-warning" asp-route-shopId="@s.ShopId">
+                      Edytuj
+                  </a>
+                  <input type="hidden" name="shopId" value="@s.ShopId" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+      </tr>
+    }
+      <div class="text-center" style="margin-bottom:2%">
+          <a asp-action="EditShop" asp-route-shopId="0" class="btn btn-primary">Dodaj sklep</a>
+      </div>
+  </tbody>
+</table>

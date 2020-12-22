@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>@ViewBag.Title</title>
+    <style>
+        .input-validation-error { border-color: red; background-color: #fee; }
+    </style>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/jquery-validation/dist/jquery.validate.min.js">
+    </script>
+    <script src="lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        @using (Html.BeginForm("List", "User", FormMethod.Post))
+  {
+        <button type="submit" class="btn btn-outline mr-1">Home</button>
+
+  }
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        @using (Html.BeginForm("List", "Admin", FormMethod.Post))
+  {
+        <button type="submit" class="btn btn-outline mr-1">Products Manager</button>
+
+  }
+
+        @using (Html.BeginForm("ListShops", "Admin", FormMethod.Post))
+  {
+        <button type="submit" class="btn btn-outline mr-1">Shops Manager</button>
+
+  }
+
+        @using (Html.BeginForm("ListWholesalers", "Admin", FormMethod.Post))
+  {
+        <button type="submit" class="btn btn-outline mr-1">Wholesalers Manager</button>
+
+  }
+
+        @using (Html.BeginForm("ListCategories", "Admin", FormMethod.Post))
+  {
+        <button type="submit" class="btn btn-outline mr-1">Categories Manager</button>
+
+  }
+
+        @using (Html.BeginForm("ListOrders", "Admin", FormMethod.Post))
+  {
+        <button type="submit" class="btn btn-outline mr-1">Orders Manager</button>
+
+  }
+    </nav>
+    <div style="margin-left:25%;margin-right:25%; margin-top:2%;">
+        @RenderBody()
+    </div>
+</body>
+</html>

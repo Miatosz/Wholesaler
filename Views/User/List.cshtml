@@ -1,0 +1,37 @@
+@model ProductListViewModel
+
+@{
+    ViewBag.Title = "Wszystkie produkty";
+    Layout = "_Layout";
+}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Opis</th>
+      <th scope="col">Cena</th>
+	  <th scope="col">Zamów</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var p in @Model.Products)
+    {
+        <tr>
+            <th scope="row">@p.Id</th>
+            <td>@p.Name</td>
+            <td>@p.Description</td>
+            <td>@p.Price.ToString("c")</td>
+            <td><form asp-controller="User" asp-action="Checkout" method="post">
+              <a asp-controller="User" asp-action="Checkout" class="btn btn-sm btn-warning" asp-route-productId="@p.Id">
+                Zamów
+              </a>
+            </form>
+            </td>
+        </tr>
+    }
+    
+  </tbody>
+</table>

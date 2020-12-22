@@ -1,0 +1,20 @@
+@model Category
+
+@{ Layout = "_AdminLayout";}
+
+<form asp-action="EditOrAddCategory" method="post">
+
+<input type="hidden" asp-for="Id"/>
+
+<div class="form-group">
+    <label asp-for="Name">Kategoria</label>
+    <input asp-for="Name" class="form-control" />
+</div>
+
+
+<div class="text-center">
+    <button class="btn btn-primary" type="submit">Zapisz</button>
+    <a asp-action="List" class="btn btn-secondary">Anuluj</a>
+    
+</div>
+</form>

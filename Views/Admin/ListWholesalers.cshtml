@@ -1,0 +1,54 @@
+@model IEnumerable<Wholesaler>
+
+@{
+    ViewBag.Title = "Wszystkie hurtownie";
+    Layout = "_AdminLayout";
+}
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Miasto</th>
+      <th scope="col">Ulica</th>
+      <th scope="col">Kod pocztowy</th>
+      <th scope="col">Email</th>
+      <th scope="col">Magazyn</th>
+	  <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach (var w in Model)
+    {
+      <tr>
+          <th scope="row">@w.WholesalerId</th>
+          <td>@w.Name</td>
+          <td>@w.City</td>
+          <td>@w.Street</td>
+          <td>@w.PostalCode</td>
+          <td>@w.Email</td>
+          <td>@w.Warehouse.Id</td>
+
+
+          <td class="text-center">
+              <form asp-action="DeleteWholesaler" method="post">
+                  <a asp-action="EditWholesaler" class="btn btn-sm btn-warning" asp-route-wholesalerId="@w.WholesalerId">
+                      Edytuj
+                  </a>
+                  <input type="hidden" name="wholesalerId" value="@w.WholesalerId" />
+                  <button type="submit" class="btn btn-danger btn-sm">
+                      Usuń
+                  </button>
+              </form>
+          </td>
+      </tr>
+    }
+
+      <div class="text-center" style="margin-bottom:2%">
+          <a asp-action="EditWholesaler" asp-route-wholesalerId="0" class="btn btn-primary">Dodaj hurtownie</a>
+      </div>
+
+  </tbody>
+</table>

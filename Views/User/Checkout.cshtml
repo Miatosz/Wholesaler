@@ -1,0 +1,31 @@
+@model Order 
+
+@{
+    Layout = "_OrderLayout";
+}
+
+<h2>Wybrany produkt: @Model.Product.Name</h2>
+<form asp-action="Checkout" method="post">
+    <h3>Wybierz sklep</h3>
+    <div class="form-group">
+            <select class="form-control" asp-for="@Model.ShopId" asp-items="ViewBag.Shops"></select>
+            <option value="ViewBag.Shops"></option>
+          </select>
+    </div>
+
+    <input asp-for="@Model.ShopId" value=@Html.DropDownList("Shops") type="hidden" />
+    <h3>podaj ilosc</h3>
+    <div class="form-group">
+    <label asp-for="@Model.Quantity">Ilosc</label>
+    <input asp-for="@Model.Quantity" class="form-control" />
+    </div>
+
+     
+  
+    
+    <input type="hidden" asp-for="@Model.ProductId" value="@Model.ProductId" />
+    
+    <div class="text-center">
+        <input class="btn btn-primary" type="submit" value="Complete Order" />
+    </div>
+</form>
