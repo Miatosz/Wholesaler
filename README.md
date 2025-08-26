@@ -1,28 +1,53 @@
-# Wholesaler Web App 
+# Wholesaler
 
-## Table of contents
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Author](#author)
-* [Screenshots](#screenshots)
+An ASP.NET Core application for wholesalers and shop owners. Shop owners can order items from wholesalers, while wholesalers can manage their warehouses and process orders.
 
-## General info
-**This project is an app for shop owners to buy items from wholesaler and for wholesalers to manage products in warehouses and check orders created with .Net Core**
+---
 
-## Technologies
+## 📋 Table of Contents
+- [General Info](#general-info)
+- [Technologies](#technologies)
+- [Features](#features)
+- [Setup](#setup)
+- [Screenshots](#screenshots)
+- [Author](#author)
+
+---
+
+## 📖 General Info
+This project is designed for **shop owners** to purchase items from a wholesaler and for **wholesalers** to manage their products and warehouses.  
+It is built with **ASP.NET Core 5** and follows a clean layered architecture.
+
+---
+
+## 🛠 Technologies
 Project is created with:
-* .Net 5.0
-* Entity Framework Core
-* Sqlite
-* Asp.Net Core
-* Boostrap
+- .NET 5.0
+- ASP.NET Core MVC
+- Entity Framework Core (SQLite)
+- AutoMapper
+- Bootstrap 5
+- Swagger
 
-## Setup
-To open and run this project, follow this commands:
-1. git clone https://github.com/Miatosz/Wholesaler.git
-2. cd .\Wholesaler\
-3. dotnet run
+---
+
+## 🚀 Features
+- Manage products (CRUD)
+- Manage customers and warehouses
+- Create and review orders
+- User-friendly UI with Bootstrap
+- REST API with Swagger documentation
+
+---
+
+## ▶️ Setup
+To run this project locally:
+
+```bash
+git clone https://github.com/Miatosz/Wholesaler.git
+cd Wholesaler
+dotnet run
+
 
 Then you can open app in browser on port **5001*(https://localhost:5001/)*
 
