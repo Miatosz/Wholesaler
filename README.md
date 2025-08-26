@@ -4,23 +4,24 @@ An ASP.NET Core application for wholesalers and shop owners. Shop owners can ord
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 - [General Info](#general-info)
 - [Technologies](#technologies)
 - [Features](#features)
+- [CI/CD](#cicd)
 - [Setup](#setup)
 - [Screenshots](#screenshots)
 - [Author](#author)
 
 ---
 
-## 📖 General Info
+## General Info
 This project is designed for **shop owners** to purchase items from a wholesaler and for **wholesalers** to manage their products and warehouses.  
 It is built with **ASP.NET Core 5** and follows a clean layered architecture.
 
 ---
 
-## 🛠 Technologies
+## Technologies
 Project is created with:
 - .NET 5.0
 - ASP.NET Core MVC
@@ -31,7 +32,7 @@ Project is created with:
 
 ---
 
-## 🚀 Features
+## Features
 - Manage products (CRUD)
 - Manage customers and warehouses
 - Create and review orders
@@ -40,7 +41,12 @@ Project is created with:
 
 ---
 
-## ▶️ Setup
+## CI/CD
+This project includes a GitHub Actions workflow that automatically builds the project and runs tests on each push or pull request.
+
+---
+
+## Setup
 To run this project locally:
 
 ```bash
