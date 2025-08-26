@@ -47,7 +47,7 @@ To run this project locally:
 git clone https://github.com/Miatosz/Wholesaler.git
 cd Wholesaler
 dotnet run
-
+```
 
 Then you can open app in browser on port **5001*(https://localhost:5001/)*
 
